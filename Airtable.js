@@ -683,14 +683,11 @@ class AirtableSorter {
    *
    * チェーンメソッド方式で追加できます。
    * @param {string} field - ソート対象のフィールド名
-   * @param {SortDirection|Array|Object} - ソート順
+   * @param {Object} - ソート順
    * @return {AirtableSorter} - 自インスタンス
    */
   append(field, direction=SortDirection.ASC) {
-    let directionValue = direction
-    if (direction instanceof SortDirection) {
-      directionValue = direction.value
-    }
+    let directionValue = direction.value
     
     this.sort.push({
       'field': field,
