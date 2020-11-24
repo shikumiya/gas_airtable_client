@@ -655,14 +655,14 @@ class SortDirection {
    * 昇順
    * @return {Object} - 昇順
    */
-  get ASC() {
+  static get ASC() {
     return {name: 'ASC', value: 'asc'}
   }
   /**
    * 降順
    * @return {Object} - 降順
    */
-  get DESC() {
+  static get DESC() {
     return {name: 'DESC', value: 'desc'}
   }
 }
